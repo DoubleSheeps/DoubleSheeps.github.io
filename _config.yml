@@ -74,7 +74,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "Today is the first day of the rest of my life. <br> So record something"
+sidebar-about-description: "So record something"
 sidebar-avatar: img/my.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
