@@ -5,7 +5,7 @@ header-img: img/home-bg-art.jpg
 email: y568462483@gmail.com
 description: "Today is the first day of the rest of your life. | So record something."
 keyword: ""
-url: "https://doublesheeps.github.io" # your host, for absolute URL
+url: "http://youngsheep.fun" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -16,7 +16,7 @@ RSS: false
 #weibo_username: huxpro
 #zhihu_username: huxpro
 github_username: DoubleSheeps
-gmail_username: y568462483@gmail.com
+gmail: y568462483@gmail.com
 #twitter_username: huxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
