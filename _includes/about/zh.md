@@ -1,4 +1,4 @@
-Hey，我是杨阳，一个普普通通的计算机专业学生。本科毕业于[南京废物大学](https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6/1004526)，计算机科学与技术专业，现在二战上了中科大软件学院。我很喜欢[绝命毒师](https://movie.douban.com/subject/2373195/)里的一句话，“Today is the first day of the rest of your life”，于是有了[Young Blog](https://doublesheeps.github.io/)。
+Hey，我是杨阳，一个普普通通的计算机专业学生。本科毕业于[南京废物大学](https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6/1004526)，计算机科学与技术专业，现在二战上了中科大软件学院。我很喜欢[绝命毒师](https://movie.douban.com/subject/2373195/)里的一句话，“Today is the first day of the rest of your life”，于是有了[Young Blog](http://youngsheep.fun)。
 
 博客使用的是[Hux大佬]([Huxpro/huxpro.github.io: My Blog / Jekyll Themes / PWA](https://github.com/huxpro/huxpro.github.io))的模板，很喜欢这个风格。
 
