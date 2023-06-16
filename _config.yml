@@ -75,7 +75,7 @@ netease_comment: true
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "Young Sheep | 一个尝试记录点什么的废物青年。"
+sidebar-about-description: "Young Sheep <br> 一个尝试记录点什么的废物青年。"
 sidebar-avatar: /img/my.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
