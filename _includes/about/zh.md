@@ -2,4 +2,4 @@ Hey，我是杨阳，一个普普通通的计算机专业学生。本科毕业�
 
 博客使用的是[Hux大佬]([Huxpro/huxpro.github.io: My Blog / Jekyll Themes / PWA](https://github.com/huxpro/huxpro.github.io))的模板，很喜欢这个风格。
 
-[Young GPT](https://chat.youngsheep.fun/)是我在Vercel上部署的Yidadaa大佬的[ChatGPT Next Web](https://github.com/Yidadaa/ChatGPT-Next-Web)的项目，由于绑定了自己的域名，因此无需代理即可访问。在设置界面填写自己的OpenAI KEY使用，如果没有KEY但也想尝试可以用邮箱联系[我](y568462483@gmail.com)获取访问码。
+[Young GPT](https://chat.youngsheep.fun/)是我在Vercel上部署的Yidadaa大佬的[ChatGPT Next Web](https://github.com/Yidadaa/ChatGPT-Next-Web)的项目，由于绑定了自己的域名，因此无需代理即可访问。在设置界面填写自己的OpenAI Key使用，如果没有Key但也想尝试可以用邮箱联系我获取访问码。
