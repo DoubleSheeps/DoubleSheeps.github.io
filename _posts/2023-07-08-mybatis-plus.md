@@ -19,7 +19,7 @@ tags:
 
 ### 引入依赖
 引入MyBatis-Plus插件就不用再引入MyBatis插件了，一方面可能会有冲突，另一方面MyBatis-Plus是在MyBatis基础上的增强插件，因此MaBatis-Plus对MyBatis原有的功能没有作任何删改，即使项目之前用的是MyBatis开发，现在换成MyBatis-Plus也不会有任何影响。
-```java
+```xml
 <dependency>
 	<groupId>com.baomidou</groupId>
 	<artifactId>mybatis-plus-boot-starter</artifactId>
