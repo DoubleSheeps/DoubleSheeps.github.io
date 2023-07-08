@@ -29,22 +29,93 @@ tags:
 ### 配置文件
 ```java
 mybatis-plus:
+    #如果在 Mapper 中有自定义方法(XML 中有自定义实现)，需要配置，告诉 Mapper 所对应的 XML 文件位置
     mapper-locations: classpath*:/mapping/*.xml
-    #实体扫描，多个package用逗号或者分号分隔
-    type-aliases-package: com.example.shirodemo.module.*.dataobject
-    #type-handlers-package: com.github.niefy.common.handler
+    #别名包扫描路径，通过该属性可以给包中的类注册别名，注册后在 Mapper 对应的 XML 文件中可以直接使用类名，而不用使用全限定的类名(即 XML 中调用的时候不用包含包名)
+    type-aliases-package: com.example.shirodemo.modules.sys.dataobject
     global-config:
-        #数据库相关配置
+        #数据库相关全局配置
         db-config:
-            #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+            #主键默认类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
             id-type: AUTO
-			
-            logic-delete-value: 0
-            logic-not-delete-value: 1
+            #逻辑删除
+            logic-delete-field: status #表示删除的字段 默认deleted
+            logic-delete-value: 0   #表示删除的值
+            logic-not-delete-value: 1   #表示未删除的值
+        #取消控制台输出的logo
         banner: false
     #原生配置
     configuration:
-        map-underscore-to-camel-case: true
-        cache-enabled: true
+        #指定当结果集中值为 null 的时候是否调用映射对象的 Setter（Map 对象时为 put）方法
+        #配置为true后，即使列为空，那么依然会调用列的Setter方法，这时候我们在Setter方法可以做对null的处理
         call-setters-on-nulls: true
-        jdbc-type-for-null: 'null'
+```
+### 实体层注解实现与数据库映射
+常用注解：
+* @TableName("表名") 设置映射的表名
+* @TableId(type = IdType.AUTO) 指定主键以及主键的生成方式，不用此注解默认主键名为id字段
+* @TableField(xxx) 可以指定字段的一些属性
+	    "字段名"名字不是直接驼峰命名转化的时候需要定义字段在表中的名称
+		insertStrategy = FieldStrategy.IGNORED 字段插入时重复则忽略插入
+		exist=false 解决实体类存在的属性对应的表中没有，不设置则会报错
+		
+```java
+@Data
+@TableName("user_info")
+public class UserModel {
+    @TableId(type = IdType.AUTO)
+    private Integer id;
+
+    private String name;
+
+    private String password;
+
+    private Byte status;
+
+    @TableField(insertStrategy = FieldStrategy.IGNORED)//account重复则不插入
+    private String account;
+
+}
+```
+### Mapper继承通用Mapper类实现的增删改查
+```java
+@Mapper
+public interface UserMapper extends BaseMapper<UserModel> {
+    //也可以自定义方法，然后编写xml文件配置sql语句实现
+    List<UserModel> selectTeacher();
+
+}
+```
+### Service层继承通用IService类，实现基础的Service逻辑
+```java
+public interface UserService extends IService<UserDO> {
+
+}
+```
+实现类也要继承通用实现类，配置实体类和Mapper
+```java
+public class UserServiceImpl extends ServiceImpl<UserDOMapper, UserDO> implements UserService {
+
+}
+```
+基础的Service增删改查
+```java
+//查询所有
+userService .list(lambdaQuery);
+//查询数量
+userService .count(lambdaQuery);
+//根据ID集合查list集合
+userService .listByIds(ids);
+//根据ID删除
+userService .removeById(id);
+//根据ID集合删除
+userService .removeByIds(ids);
+//修改
+userService .update(userModel);
+//新增
+userService .save(userModel);
+//新增或者修改,判断ID是否存在，如果ID不存在执行新增，如果ID存在先执行查询语句，查询结果为空新增，否则修改。
+userService.saveOrUpdate(userModel)
+//批量新增或者修改
+userService.saveOrUpdateBatch(userModelList)
+```
