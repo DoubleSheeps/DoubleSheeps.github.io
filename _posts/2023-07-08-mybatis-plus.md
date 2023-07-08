@@ -27,7 +27,7 @@ tags:
 </dependency>
 ```
 ### 配置文件
-```java
+```yml
 mybatis-plus:
     #如果在 Mapper 中有自定义方法(XML 中有自定义实现)，需要配置，告诉 Mapper 所对应的 XML 文件位置
     mapper-locations: classpath*:/mapping/*.xml
