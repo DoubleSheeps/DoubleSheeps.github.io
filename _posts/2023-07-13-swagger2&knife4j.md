@@ -6,8 +6,8 @@ author:       "Young Sheep"
 header-style:      text
 catalog:      true
 tags:
-    - knife4j
-    - swagger
+    - Knife4j
+    - Swagger
     - SpringBoot
     - Java开发笔记
 ---
