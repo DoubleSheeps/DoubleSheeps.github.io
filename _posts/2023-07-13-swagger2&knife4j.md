@@ -79,6 +79,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 这样便能顺利的打开http://localhost:项目port/swagger-ui.html 查看接口信息了。
 ### 使用注解完善接口文档信息
 如果不用注解给接口以及Model对象设置一些备注，那这个接口文档的可读性将会很差，因此需要在项目中通过注解完善接口文档的信息，很显然这样做说明Swagger具有代码入侵性，但都用了懒人插件了，谁还管那么多呢😊。
+
 | 注解              | 使用位置                    | 作用                                          |
 | :---------------- | :-------------------------- | :-------------------------------------------- |
 | @Api              | 用于controller类上          | 定义接口的名程以及标签                        |
@@ -87,6 +88,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 | @ApiIgnore        | 用于controller方法上        | 可以让Swagger忽略这个接口，不显示在接口文档中 |
 | @ApiModel         | 数据传输对象(DTO)类上       | 定义参数对象的名称                            |
 | @ApiModelProperty | 数据传输对象(DTO)类的属性上 | 定义具体参数的描述                            |
+
 注解使用实例：
 * Controller类
   ```java
