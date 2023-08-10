@@ -15,6 +15,7 @@ tags:
 
 ### if字段的使用
 在编写xml中的select方法时，可以使用\<if\>\</if\>中的test属性根据参数是否存在动态的构造查询语句。
+
 例如当参数中name属性存在时就要根据name字段进行查询学生数据库时，可这样编写xml中的select方法：
 ```sql
 <select id="xxxx" parameterType="xxxx" resultType="xxxx">
@@ -25,6 +26,7 @@ tags:
 </select>
 ```
 显然这种简单的情况用LambdaQueryWrapper也能轻松实现，但LambdaQueryWrapper处理多表联查就没那么方便了，但编写xml还是一样的逻辑。
+
 例如现在的需求还要加上如果参数中的classId属性存在时就要从student_classs表中找class_id相同的学生信息，这同样可以根据编写带有\<if\>\</if\>的xml实现：
 ```sql
 <select id="xxxx" parameterType="xxxx" resultType="xxxx">
@@ -46,6 +48,7 @@ tags:
 
 ### foreach字段的使用
 实际中更常见的需求可能是上述的class_id不止一个，也就是班级id具有多选的功能，因此得到的classIds是一个数组，而在select查询中使用in条件判断就能满足这样的需求，也就是可以用class_id in (x,x,x)实现，但如何在xml中构造这样的查询条件就很关键了。
+
 \<foreach\>\</foreach\>简直就是为构造这个查询语句而生的，在xml中使用\<foreach\>字段，我们可以设置collection属性规定要循环的数组，item属性规定循环的每个值，open规定前缀，separator规定循环的分割符，close规定后缀，因此上述需求的select方法就可这样编写：
 ```sql
 <select id="xxxx" parameterType="xxxx" resultType="xxxx">
