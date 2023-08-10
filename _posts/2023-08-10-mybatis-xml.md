@@ -13,7 +13,7 @@ tags:
 ---
 >之前项目采用了mybatis-plus插件作为数据库的连接层，大大提高了数据库基础增删改查的效率，但遇到复杂的数据库查询操作LambdaQueryWrapper我还是玩不太明白，因此只能尝试老办法：编写对应mapper的xml实现。好在mybatis-plus只是在mybatis的基础上做拓展，原先mybatis支持的xml方式映射mapper方法依然是可用的。
 
-### \<if\>\</if\>字段的使用
+### if字段的使用
 在编写xml中的select方法时，可以使用\<if\>\</if\>中的test属性根据参数是否存在动态的构造查询语句。
 例如当参数中name属性存在时就要根据name字段进行查询学生数据库时，可这样编写xml中的select方法：
 ```sql
@@ -44,7 +44,7 @@ tags:
 ```
 需要注意的是由于我们两个查询条件都是通过\<if\>\</if\>判断的，因此为了更简洁的编写，我先固定了where true的查询条件，这个条件并不会对最终的结果产生影响，但这样做两个需要通过if判断的查询条件就可以直接用and并列了，不用考虑第一个查询条件如果不存在就没有where字段了。
 
-### \<foreach\>\</foreach\>字段的使用
+### foreach字段的使用
 实际中更常见的需求可能是上述的class_id不止一个，也就是班级id具有多选的功能，因此得到的classIds是一个数组，而在select查询中使用in条件判断就能满足这样的需求，也就是可以用class_id in (x,x,x)实现，但如何在xml中构造这样的查询条件就很关键了。
 \<foreach\>\</foreach\>简直就是为构造这个查询语句而生的，在xml中使用\<foreach\>字段，我们可以设置collection属性规定要循环的数组，item属性规定循环的每个值，open规定前缀，separator规定循环的分割符，close规定后缀，因此上述需求的select方法就可这样编写：
 ```sql
