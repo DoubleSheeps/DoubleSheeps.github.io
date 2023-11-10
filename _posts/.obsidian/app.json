@@ -1,1 +1,5 @@
-{}
+{
+  "promptDelete": false,
+  "strictLineBreaks": true,
+  "showLineNumber": true
+}

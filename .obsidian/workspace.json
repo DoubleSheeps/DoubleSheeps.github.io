@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "5664c1a49bf22591",
+    "id": "2b55ffcc184ff8d7",
     "type": "split",
     "children": [
       {
-        "id": "1069089a311b21aa",
+        "id": "7fbf8f5dc6b16db9",
         "type": "tabs",
         "children": [
           {
-            "id": "8eb3df6acbbcc172",
+            "id": "b3e8975b341f9a0f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023-07-05-quartz.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fd8930b6ea32d35c",
+    "id": "9ee0cff5e80404fc",
     "type": "split",
     "children": [
       {
-        "id": "f3b662b52ce9f225",
+        "id": "729d1b630d103a2f",
         "type": "tabs",
         "children": [
           {
-            "id": "31ea0cc8cc2b2a99",
+            "id": "7e3a1c788dd9cccf",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,12 +39,12 @@
             }
           },
           {
-            "id": "98c1947630214916",
+            "id": "c5b47fd974e3a53a",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "8323c8ef5e475f29",
+            "id": "c485895d90ee28ce",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "721811c9c68814ad",
+    "id": "2f9fe3a594a55156",
     "type": "split",
     "children": [
       {
-        "id": "d442b980de8d3bda",
+        "id": "f9d2abf9d5099e06",
         "type": "tabs",
         "children": [
           {
-            "id": "3ec82ab76a14c761",
+            "id": "5717100a1da67af0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-07-05-quartz.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +92,18 @@
             }
           },
           {
-            "id": "c3e2cb38d9b6456d",
+            "id": "0f5289117c93957e",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-07-05-quartz.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "e76529167fd5fc4a",
+            "id": "055c2367ea90bc8b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,13 +114,11 @@
             }
           },
           {
-            "id": "e1120d93a93c9d16",
+            "id": "824fdc981a8ad64e",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2023-07-05-quartz.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,11 +138,6 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8eb3df6acbbcc172",
-  "lastOpenFiles": [
-    "未命名.canvas",
-    "2023-07-05-quartz.md",
-    "2023-08-10-mybatis-xml.md",
-    "2020-07-11-awtrix.md"
-  ]
+  "active": "b3e8975b341f9a0f",
+  "lastOpenFiles": []
 }
