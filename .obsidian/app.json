@@ -1,1 +1,8 @@
-{}
+{
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "img/in-post",
+  "promptDelete": false,
+  "newLinkFormat": "relative",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "_posts"
+}
