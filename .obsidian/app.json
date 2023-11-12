@@ -3,6 +3,6 @@
   "attachmentFolderPath": "img/in-post",
   "promptDelete": false,
   "newLinkFormat": "absolute",
-  "newFileLocation": "folder",
+  "newFileLocation": "current",
   "newFileFolderPath": "_posts"
 }
