@@ -2,7 +2,7 @@
   "useMarkdownLinks": true,
   "attachmentFolderPath": "img/in-post",
   "promptDelete": false,
-  "newLinkFormat": "relative",
+  "newLinkFormat": "absolute",
   "newFileLocation": "folder",
   "newFileFolderPath": "_posts"
 }
